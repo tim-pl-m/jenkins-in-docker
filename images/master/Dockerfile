@@ -10,8 +10,9 @@ ENV JENKINS_HOME /root/jenkins
 ENV JENKINS_VERSION 2.32.1
 
 # GitHub repository to store Jenkins configuration
-ENV GITHUB_USERNAME antonfisher
-ENV GITHUB_CONFIG_REPOSITORY my-jenkins-config
+# https://github.com/tim-pl-m/public-jenkins-config
+ENV GITHUB_USERNAME tim-pl-m
+ENV GITHUB_CONFIG_REPOSITORY public-jenkins-config
 
 # Make Jenkins home directory
 RUN mkdir -p $JENKINS_HOME
