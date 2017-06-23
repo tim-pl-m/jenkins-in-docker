@@ -1,4 +1,4 @@
-FROM jenkins:2.32.1
+FROM jenkins:2.60.1
 MAINTAINER Anton Fisher <a.fschr@gmail.com>
 
 # root user for Jenkins, need to get access to /var/run/docker.sock (fix this in the future!)
