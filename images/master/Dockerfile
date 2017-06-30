@@ -1,4 +1,4 @@
-FROM jenkins:2.46.3
+FROM jenkins:2.46.1
 MAINTAINER Anton Fisher <a.fschr@gmail.com>
 
 # root user for Jenkins, need to get access to /var/run/docker.sock (fix this in the future!)
@@ -20,8 +20,10 @@ RUN mkdir -p $JENKINS_HOME
 # Install Jenkins plugins
 RUN /usr/local/bin/install-plugins.sh \
     scm-sync-configuration:0.0.10 \
-    workflow-aggregator:2.4 \
-    docker-workflow:1.8
+    workflow-aggregator:2.5 \
+    docker-workflow:1.12
+    #TODO test git plugin
+    git:3.3.1
 
 # Set timezone
 RUN echo "America/Los_Angeles" > /etc/timezone &&\
