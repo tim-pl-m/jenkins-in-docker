@@ -1,9 +1,6 @@
 FROM jenkins:2.60.1
 MAINTAINER Anton Fisher <a.fschr@gmail.com>
 
-RUN apt-get update && apt-get install -y libltdl7 && rm -rf /var/lib/apt/lists/*
-# TODO https://github.com/jenkinsci/docker/issues/506
-
 # root user for Jenkins, need to get access to /var/run/docker.sock (fix this in the future!)
 USER root
 
@@ -16,6 +13,9 @@ ENV JENKINS_VERSION 2.60.1
 # https://github.com/tim-pl-m/public-jenkins-config
 ENV GITHUB_USERNAME tim-pl-m
 ENV GITHUB_CONFIG_REPOSITORY public-jenkins-config
+
+RUN apt-get update && apt-get install -y libltdl7 && rm -rf /var/lib/apt/lists/*
+# TODO https://github.com/jenkinsci/docker/issues/506
 
 # Make Jenkins home directory
 RUN mkdir -p $JENKINS_HOME
