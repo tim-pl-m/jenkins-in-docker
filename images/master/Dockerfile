@@ -7,7 +7,7 @@ USER root
 # Environment
 ENV HOME /root
 ENV JENKINS_HOME /root/jenkins
-ENV JENKINS_VERSION 2.46.3
+ENV JENKINS_VERSION 2.46.1
 
 # GitHub repository to store Jenkins configuration
 # https://github.com/tim-pl-m/public-jenkins-config
