@@ -65,7 +65,6 @@ RUN git config --global user.email "jenkins@container" &&\
 
 # Clone Jenkins config
 RUN cd /tmp &&\
-    git clone git@github.com:$GITHUB_USERNAME/$GITHUB_CONFIG_REPOSITORY.git &&\
     # git clone git@github.com:$GITHUB_USERNAME/$GITHUB_CONFIG_REPOSITORY.git &&\
     # TODO check why needed
     git clone https://github.com/tim-pl-m/$GITHUB_CONFIG_REPOSITORY.git &&\
