@@ -4,9 +4,9 @@ MAINTAINER Anton Fisher <a.fschr@gmail.com>
 USER root
 
 # Set timezone
-RUN echo "America/Los_Angeles" > /etc/timezone &&\
-    dpkg-reconfigure --frontend noninteractive tzdata &&\
-    date
+# RUN echo "America/Los_Angeles" > /etc/timezone &&\
+#     dpkg-reconfigure --frontend noninteractive tzdata &&\
+#     date
 
 # Set locale
 RUN locale-gen en_US.UTF-8
