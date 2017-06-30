@@ -5,7 +5,7 @@ USER root
 
 # Set timezone
 RUN echo "America/Los_Angeles" > /etc/timezone &&\
-    apt-get update &&
+    apt-get update &&\
     dpkg-reconfigure --frontend noninteractive tzdata &&\
     date
 
