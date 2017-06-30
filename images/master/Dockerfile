@@ -21,7 +21,7 @@ RUN mkdir -p $JENKINS_HOME
 RUN /usr/local/bin/install-plugins.sh \
     scm-sync-configuration:0.0.10 \
     workflow-aggregator:2.5 \
-    docker-workflow:1.12
+    docker-workflow:1.12 \
     #TODO test git plugin
     git:3.3.1
 
